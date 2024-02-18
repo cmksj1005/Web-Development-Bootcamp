@@ -1,15 +1,10 @@
-function Footer() {
-  const cTime = new Date();
-  const cYear = cTime.getFullYear();
-  const text = 'copyright';
-  const cSymbol = '\u00A9';
-  const space = ' ';
+import React from 'react';
 
+function Footer() {
+  const year = new Date().getFullYear();
   return (
     <footer>
-      <p>
-        {text} {space} {cSymbol} {space} {cYear}
-      </p>
+      <p>Copyright ⓒ {year}</p>
     </footer>
   );
 }
