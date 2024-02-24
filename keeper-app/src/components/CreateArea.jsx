@@ -27,12 +27,14 @@ function CreateArea(props) {
 
   return (
     <div>
-      <form>
+      <form onSubmit={submitNote}>
         <input
           name="title"
           onChange={handleChange}
           value={note.title}
           placeholder="Title"
+          maxlength="30"
+          required
         />
         <textarea
           name="content"
@@ -41,7 +43,8 @@ function CreateArea(props) {
           placeholder="Take a note..."
           rows="3"
         />
-        <button onClick={submitNote}>Add</button>
+        <button type="submit">Add</button>
+        {/* onSubmit makes an error here / required doesn't work when I use onClick here */}
       </form>
     </div>
   );

@@ -19,7 +19,6 @@ function App() {
         return index !== id;
       });
     });
-    console.log('Delete was triggered');
   }
 
   return (
