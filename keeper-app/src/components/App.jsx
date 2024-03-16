@@ -13,6 +13,22 @@ function App() {
     });
   }
 
+  function editNote(newNote) {
+    setNotes(
+      notes.map((note, id) => {
+        if (id === newNote.id) {
+          return {
+            ...note,
+            title: newNote.title,
+            content: newNote.content,
+            category: newNote.category,
+          };
+        }
+        return note;
+      })
+    );
+  }
+
   function deleteNote(id) {
     setNotes((prevNotes) => {
       return prevNotes.filter((noteItem, index) => {
@@ -32,6 +48,8 @@ function App() {
             id={index}
             title={noteItem.title}
             content={noteItem.content}
+            category={noteItem.category}
+            onEdit={editNote}
             onDelete={deleteNote}
           />
         );

@@ -4,6 +4,7 @@ function CreateArea(props) {
   const [note, setNote] = useState({
     title: '',
     content: '',
+    category: '',
   });
 
   function handleChange(event) {
@@ -21,6 +22,7 @@ function CreateArea(props) {
     setNote({
       title: '',
       content: '',
+      category: '',
     });
     event.preventDefault();
   }
@@ -33,7 +35,7 @@ function CreateArea(props) {
           onChange={handleChange}
           value={note.title}
           placeholder="Title"
-          maxlength="30"
+          maxLength="30"
           required
         />
         <textarea
@@ -43,6 +45,23 @@ function CreateArea(props) {
           placeholder="Take a note..."
           rows="3"
         />
+        <select required>
+          <option name="category" value="">
+            Category
+          </option>
+          <option name="category" onChange={handleChange} value="Study">
+            Study
+          </option>
+          <option name="category" onChange={handleChange} value="Work">
+            Work
+          </option>
+          <option name="category" onChange={handleChange} value="Daily">
+            Daily
+          </option>
+          <option name="category" onChange={handleChange} value="Play">
+            Play
+          </option>
+        </select>
         <button type="submit">Add</button>
         {/* onSubmit makes an error here / required doesn't work when I use onClick here */}
       </form>
