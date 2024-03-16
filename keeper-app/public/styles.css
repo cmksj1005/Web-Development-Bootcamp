@@ -55,7 +55,7 @@ footer p {
   word-wrap: break-word;
 }
 
-form button {
+#addButton {
   position: absolute;
   right: 18px;
   bottom: -18px;
@@ -73,13 +73,17 @@ form button {
 .note button {
   position: relative;
   float: right;
-  margin-right: 10px;
   color: #f5ba13;
   border: none;
   width: 36px;
-  height: 36px;
+  height: 30px;
   cursor: pointer;
   outline: none;
+}
+
+#delButton {
+  width: 60px;
+  height: 30px;
 }
 
 form {
@@ -159,4 +163,25 @@ body.active-modal {
   top: 10px;
   right: 10px;
   padding: 5px 7px;
+}
+
+#category {
+  background: #f5b9137b;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  margin: 0;
+  padding-top: 8px;
+  position: relative;
+  float: right;
+  font-size: 15px;
+  font-weight: 900;
+  background-position: top;
+}
+
+.modal button {
+  color: #f5ba13;
+  width: 60px;
+  height: 30px;
+  background-color: #f1f1f1;
 }

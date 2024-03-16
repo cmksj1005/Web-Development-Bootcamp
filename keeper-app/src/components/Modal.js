@@ -62,25 +62,15 @@ export default function Modal(props) {
                 placeholder="Take a note..."
                 rows="3"
               />
-              <select required>
-                <option name="category" value="">
-                  Category
-                </option>
-                <option name="category" value="Study">
-                  Study
-                </option>
-                <option name="category" value="Work">
-                  Work
-                </option>
-                <option name="category" value="Daily">
-                  Daily
-                </option>
-                <option name="category" value="Play">
-                  Play
-                </option>
+              <select name="category" onChange={handleChange} required>
+                <option value="">Category</option>
+                <option value="Study">Study</option>
+                <option value="Work">Work</option>
+                <option value="Daily">Daily</option>
+                <option value="Play">Play</option>
               </select>
-              <button onClick={editNote}>EDIT</button>
               <button onClick={toggleModal}>CLOSE</button>
+              <button onClick={editNote}>EDIT</button>
             </form>
           </div>
         </div>
