@@ -6,8 +6,6 @@ function Note(props) {
     props.onDelete(props.id);
   }
 
-  console.log(props);
-
   function handleEdit(newNote) {
     props.onEdit(newNote);
   }

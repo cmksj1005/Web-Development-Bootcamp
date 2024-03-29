@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function CreateArea(props) {
   const [note, setNote] = useState({
@@ -9,7 +9,6 @@ function CreateArea(props) {
 
   function handleChange(event) {
     const { name, value } = event.target;
-    console.log(value);
     setNote((prevNote) => {
       return {
         ...prevNote,
@@ -20,6 +19,7 @@ function CreateArea(props) {
 
   function submitNote(event) {
     props.onAdd(note);
+
     setNote({
       title: '',
       content: '',
@@ -27,6 +27,10 @@ function CreateArea(props) {
     });
     event.preventDefault();
   }
+
+  useEffect(() => {
+    console.log('note:', note);
+  }, [note]);
 
   return (
     <div>

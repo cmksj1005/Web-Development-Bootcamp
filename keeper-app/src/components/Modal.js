@@ -4,7 +4,7 @@ export default function Modal(props) {
   const [modal, setModal] = useState(false);
   const [note, setNote] = useState({
     id: props.id,
-    title: props.content,
+    title: props.title,
     content: props.content,
     category: props.category,
   });
