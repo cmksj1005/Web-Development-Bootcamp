@@ -3,6 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import Note from './Note';
 import CreateArea from './CreateArea';
+import SortButton from './SortButton';
 
 function App() {
   const [notes, setNotes] = useState([]);
@@ -37,9 +38,24 @@ function App() {
     });
   }
 
+  function handleButtonClick(name) {
+    notes.sort(function (a, b) {
+      return a.category - b.category;
+    });
+
+    console.log(notes);
+  }
+
   return (
     <div>
       <Header />
+      <div>
+        <SortButton
+          name="Category"
+          onClick={() => handleButtonClick('category')}
+        />
+        <SortButton name="Date" onClick={() => handleButtonClick('date')} />
+      </div>
       <CreateArea onAdd={addNote} />
       {notes.map((noteItem, index) => {
         return (

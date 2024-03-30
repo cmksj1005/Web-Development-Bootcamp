@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
+// import React, { useState, useEffect } from 'react';
 
 function CreateArea(props) {
   const [note, setNote] = useState({
@@ -28,9 +29,9 @@ function CreateArea(props) {
     event.preventDefault();
   }
 
-  useEffect(() => {
-    console.log('note:', note);
-  }, [note]);
+  // useEffect(() => {
+  //   console.log('note:', note);
+  // }, [note]);
 
   return (
     <div>
