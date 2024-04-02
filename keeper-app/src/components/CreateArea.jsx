@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 // import React, { useState, useEffect } from 'react';
 
+// Put this Array outside of the CreateArea function to use in Modal module as well
+export const categories = ['Study', 'Work', 'Daily', 'Play'];
+
 function CreateArea(props) {
   const [note, setNote] = useState({
     title: '',
@@ -31,8 +34,6 @@ function CreateArea(props) {
       category: '',
       time: '',
     });
-    //reset the category which is dropbox
-    document.getElementById('myForm').selectedIndex = 0;
     event.preventDefault();
   }
 
@@ -58,12 +59,18 @@ function CreateArea(props) {
           placeholder="Take a note..."
           rows="3"
         />
-        <select id="myForm" name="category" onChange={handleChange} required>
+        <select
+          id="myForm"
+          name="category"
+          value={note.category}
+          onChange={handleChange}
+          required
+        >
           <option value="">Category</option>
-          <option value="Study">Study</option>
-          <option value="Work">Work</option>
-          <option value="Daily">Daily</option>
-          <option value="Play">Play</option>
+          <option value={categories[0]}>{categories[0]}</option>
+          <option value={categories[1]}>{categories[1]}</option>
+          <option value={categories[2]}>{categories[2]}</option>
+          <option value={categories[3]}>{categories[3]}</option>
         </select>
         <button id="addButton" type="submit">
           Add

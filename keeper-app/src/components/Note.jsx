@@ -11,6 +11,7 @@ function Note(props) {
   }
 
   function displayDate(time) {
+    // To display year, month and day only
     // Get year, month, and day
     let year = time.getFullYear();
     let month = time.getMonth() + 1; // getMonth() is zero-based
@@ -37,6 +38,7 @@ function Note(props) {
           id={props.id}
           title={props.title.trim()}
           content={props.content.trim()}
+          category={props.category}
           onAdd={handleEdit}
         />
         <button id="delButton" onClick={handleDelete}>

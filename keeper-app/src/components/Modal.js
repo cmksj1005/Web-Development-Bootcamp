@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { categories } from './CreateArea';
 
 export default function Modal(props) {
   const [modal, setModal] = useState(false);
+
   const [note, setNote] = useState({
     id: props.id,
     title: props.title,
@@ -41,7 +43,6 @@ export default function Modal(props) {
       <button onClick={toggleModal} className="btn-modal">
         EDIT
       </button>
-
       {modal && (
         <div className="modal">
           <div onClick={toggleModal} className="overlay"></div>
@@ -62,12 +63,18 @@ export default function Modal(props) {
                 placeholder="Take a note..."
                 rows="3"
               />
-              <select name="category" onChange={handleChange} required>
+              <select
+                id="modalForm"
+                name="category"
+                value={note.category}
+                onChange={handleChange}
+                required
+              >
                 <option value="">Category</option>
-                <option value="Study">Study</option>
-                <option value="Work">Work</option>
-                <option value="Daily">Daily</option>
-                <option value="Play">Play</option>
+                <option value={categories[0]}>{categories[0]}</option>
+                <option value={categories[1]}>{categories[1]}</option>
+                <option value={categories[2]}>{categories[2]}</option>
+                <option value={categories[3]}>{categories[3]}</option>
               </select>
               <button onClick={toggleModal}>CLOSE</button>
               <button onClick={editNote}>EDIT</button>
