@@ -39,7 +39,7 @@ function App() {
   }
 
   function handleButtonClick(name) {
-    // why I should use [] here instead of .
+    //sorting notes array according to components
     notes.sort((item1, item2) => {
       if (item1[name] < item2[name]) {
         return -1;
@@ -49,6 +49,7 @@ function App() {
       }
       return 0;
     });
+    //re-arranage the note array
     setNotes([...notes]);
   }
 
@@ -60,7 +61,7 @@ function App() {
           name="Category"
           onClick={() => handleButtonClick('category')}
         />
-        <SortButton name="Date" onClick={() => handleButtonClick('date')} />
+        <SortButton name="Date" onClick={() => handleButtonClick('time')} />
       </div>
       <CreateArea onAdd={addNote} />
       {notes.map((noteItem, index) => {

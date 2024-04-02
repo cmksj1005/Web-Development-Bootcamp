@@ -8,8 +8,9 @@ function CreateArea(props) {
     category: '',
     time: '',
   });
-  let date = new Date().toLocaleDateString('en-CA');
+  let date = new Date();
 
+  //insert time value into note
   function handleChange(event) {
     const { name, value } = event.target;
     console.log(event.target);
@@ -24,7 +25,7 @@ function CreateArea(props) {
 
   function submitNote(event) {
     props.onAdd(note);
-
+    // this.reset();
     setNote({
       title: '',
       content: '',
