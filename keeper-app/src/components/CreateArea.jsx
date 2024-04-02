@@ -25,13 +25,14 @@ function CreateArea(props) {
 
   function submitNote(event) {
     props.onAdd(note);
-    // this.reset();
     setNote({
       title: '',
       content: '',
       category: '',
       time: '',
     });
+    //reset the category which is dropbox
+    document.getElementById('myForm').selectedIndex = 0;
     event.preventDefault();
   }
 
@@ -57,7 +58,7 @@ function CreateArea(props) {
           placeholder="Take a note..."
           rows="3"
         />
-        <select name="category" onChange={handleChange} required>
+        <select id="myForm" name="category" onChange={handleChange} required>
           <option value="">Category</option>
           <option value="Study">Study</option>
           <option value="Work">Work</option>
