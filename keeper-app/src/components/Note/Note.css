@@ -1,0 +1,69 @@
+.note {
+  background: #fff;
+  border-radius: 7px;
+  box-shadow: 0 2px 5px #ccc;
+  padding: 10px;
+  width: 240px;
+  margin: 16px;
+  float: left;
+}
+.note h1 {
+  font-size: 1.1em;
+  margin-bottom: 6px;
+}
+.note p {
+  font-size: 1.1em;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* .note Button {
+  position: relative;
+  float: right;
+  color: #f5ba13;
+  border: none;
+  width: 36px;
+  height: 30px;
+  cursor: pointer;
+  outline: none;
+} */
+
+/* #category {
+  background: #f5b9137b;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  margin: 0;
+  padding-top: 8px;
+  position: relative;
+  float: right;
+  font-size: 15px;
+  font-weight: 900;
+  background-position: top;
+} */
+
+#date {
+  color: #ccc;
+  font-size: 1em;
+  font-weight: bolder;
+  padding: 0;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+#bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* #delButton {
+  position: relative;
+  float: right;
+  color: #f5ba13;
+  border: none;
+  width: 60px;
+  height: 30px;
+  cursor: pointer;
+  outline: none;
+} */

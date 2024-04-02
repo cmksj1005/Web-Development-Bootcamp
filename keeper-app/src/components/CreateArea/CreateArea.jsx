@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './CreateArea.css';
 // import React, { useState, useEffect } from 'react';
 
 // Put this Array outside of the CreateArea function to use in Modal module as well

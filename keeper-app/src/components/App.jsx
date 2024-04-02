@@ -3,7 +3,7 @@ import Header from './Header/Header';
 import Footer from './Footer/Footer';
 import Note from './Note/Note';
 import CreateArea from './CreateArea/CreateArea';
-import SortButton from './sortButton/SortButton';
+import SortButton from './SortButton/SortButton';
 
 function App() {
   const [notes, setNotes] = useState([]);

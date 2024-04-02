@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { categories } from '../CreateArea/CreateArea';
+import './Modal.css';
 
 export default function Modal(props) {
   const [modal, setModal] = useState(false);
@@ -63,21 +64,29 @@ export default function Modal(props) {
                 placeholder="Take a note..."
                 rows="3"
               />
-              <select
-                id="modalForm"
-                name="category"
-                value={note.category}
-                onChange={handleChange}
-                required
-              >
-                <option value="">Category</option>
-                <option value={categories[0]}>{categories[0]}</option>
-                <option value={categories[1]}>{categories[1]}</option>
-                <option value={categories[2]}>{categories[2]}</option>
-                <option value={categories[3]}>{categories[3]}</option>
-              </select>
-              <button onClick={toggleModal}>CLOSE</button>
-              <button onClick={editNote}>EDIT</button>
+              <div id="buttonLocation">
+                <select
+                  id="modalForm"
+                  name="category"
+                  value={note.category}
+                  onChange={handleChange}
+                  required
+                >
+                  <option value="">Category</option>
+                  <option value={categories[0]}>{categories[0]}</option>
+                  <option value={categories[1]}>{categories[1]}</option>
+                  <option value={categories[2]}>{categories[2]}</option>
+                  <option value={categories[3]}>{categories[3]}</option>
+                </select>
+                <div>
+                  <button className="modalButton" onClick={editNote}>
+                    EDIT
+                  </button>
+                  <button className="modalButton" onClick={toggleModal}>
+                    CLOSE
+                  </button>
+                </div>
+              </div>
             </form>
           </div>
         </div>
