@@ -10,15 +10,13 @@ function Note(props) {
     props.onEdit(newNote);
   }
 
-  let date = new Date().toLocaleDateString('en-CA');
-
   return (
     <div className="note">
       <p id="category">{props.category}</p>
       <h1>{props.title.trim()}</h1>
       <p>{props.content.trim()}</p>
       <div id="bottom">
-        <p id="date">{date}</p>
+        <p id="date">{props.date}</p>
         <Modal
           id={props.id}
           title={props.title.trim()}

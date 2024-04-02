@@ -39,11 +39,17 @@ function App() {
   }
 
   function handleButtonClick(name) {
-    notes.sort(function (a, b) {
-      return a.category - b.category;
+    // why I should use [] here instead of .
+    notes.sort((item1, item2) => {
+      if (item1[name] < item2[name]) {
+        return -1;
+      }
+      if (item1[name] > item2[name]) {
+        return 1;
+      }
+      return 0;
     });
-
-    console.log(notes);
+    setNotes([...notes]);
   }
 
   return (
@@ -65,6 +71,7 @@ function App() {
             title={noteItem.title}
             content={noteItem.content}
             category={noteItem.category}
+            time={noteItem.time}
             onEdit={editNote}
             onDelete={deleteNote}
           />

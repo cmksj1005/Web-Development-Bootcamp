@@ -6,6 +6,7 @@ function CreateArea(props) {
     title: '',
     content: '',
     category: '',
+    time: '',
   });
 
   function handleChange(event) {
@@ -25,9 +26,12 @@ function CreateArea(props) {
       title: '',
       content: '',
       category: '',
+      time: '',
     });
     event.preventDefault();
   }
+
+  let date = new Date().toLocaleDateString('en-CA');
 
   // useEffect(() => {
   //   console.log('note:', note);
@@ -58,6 +62,7 @@ function CreateArea(props) {
           <option value="Daily">Daily</option>
           <option value="Play">Play</option>
         </select>
+        <input type="hidden" name="time" value={note.date}></input>
         <button id="addButton" type="submit">
           Add
         </button>
