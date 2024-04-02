@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { categories } from './CreateArea';
+import { categories } from '../CreateArea/CreateArea';
 
 export default function Modal(props) {
   const [modal, setModal] = useState(false);
