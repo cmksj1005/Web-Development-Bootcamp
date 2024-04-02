@@ -131,20 +131,6 @@ body.active-modal {
   font-size: 18px;
 } */
 
-.modal,
-.overlay {
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  position: fixed;
-}
-
-.overlay {
-  background: rgba(49, 49, 49, 0.8);
-}
 .modal-content {
   position: absolute;
   top: 40%;
@@ -184,4 +170,19 @@ body.active-modal {
   width: 60px;
   height: 30px;
   background-color: #f1f1f1;
+}
+
+.modal,
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.overlay {
+  background: rgba(49, 49, 49, 0.8);
 }
