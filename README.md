@@ -9,10 +9,12 @@ This app is crafted using HTML, CSS, and React to offer a streamlined note-takin
   
 ## How to start
 
-1. Install npm package  
+1. Install npm package
+   
    npm install
 
 2. Run npm
+   
    npm start
         
 3. Navigate to “http://localhost:3000/”
