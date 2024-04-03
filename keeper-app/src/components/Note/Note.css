@@ -29,19 +29,19 @@
   outline: none;
 } */
 
-/* #category {
+#category {
   background: #f5b9137b;
   height: 36px;
   border: none;
   border-radius: 50%;
   margin: 0;
   padding-top: 8px;
-  position: relative;
+  /* position: relative; */
   float: right;
   font-size: 15px;
   font-weight: 900;
   background-position: top;
-} */
+}
 
 #date {
   color: #ccc;
@@ -57,8 +57,8 @@
   justify-content: space-between;
 }
 
-/* #delButton {
-  position: relative;
+#delButton {
+  /* position: relative; */
   float: right;
   color: #f5ba13;
   border: none;
@@ -66,4 +66,4 @@
   height: 30px;
   cursor: pointer;
   outline: none;
-} */
+}

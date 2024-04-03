@@ -1,5 +1,6 @@
-.buttonLocation {
-  padding-left: 1000px;
+#buttonLocation {
+  display: flex;
+  justify-content: space-between;
 }
 
 .modalButton {
@@ -9,6 +10,7 @@
   background-color: #f1f1f1;
   margin-right: 10px;
   border: 0;
+  cursor: pointer;
 }
 
 .modal,
@@ -48,4 +50,14 @@
 
 body.active-modal {
   overflow-y: hidden;
+}
+
+.btn-modal {
+  float: right;
+  color: #f5ba13;
+  border: none;
+  width: 40px;
+  height: 30px;
+  cursor: pointer;
+  outline: none;
 }
