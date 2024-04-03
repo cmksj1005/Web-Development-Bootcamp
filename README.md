@@ -1,40 +1,23 @@
-# Crossword Puzzles Game
+# ThinkThatch 
+This app is crafted using HTML, CSS, and React to offer a streamlined note-taking experience. It allows you to effortlessly jot down titles and content for your notes. Additionally, you can categorize your notes under labels like Study, Work, Daily, or Play for organized storage. The app features a convenient sorting function, enabling you to arrange your notes either by Date or Category. Plus, it provides the flexibility to edit your notes whenever necessary.
 
-introduction about the project (participates if needed) (3~5 lines)
-
+## Features
+- Simple and intuitive note-taking
+- Categorize notes into Study, Work, Daily, or Play
+- Sort notes by date or category
+- Edit notes as needed
+  
 ## How to start
 
-1. get local server
-    1. Option 1) Use Docker
+1. Install npm package  
+   npm install
+
+2. Run npm
+   npm start
         
-        ```json
-        docker pull <image>:v1.0
-        docker run --init -p 3000:3000 -it <image>:v1.0
-        ```
-        
-    2. Option 2) Use npm
-        1. Download or clone this repo
-        2. Open your terminal
-        
-        ```json
-        npm install
-        npm start
-        ```
-        
-2. Navigate to “http://localhost:3000/”
+3. Navigate to “http://localhost:3000/”
 
-+write potential error cases (server must be running, macOS error, etc)
+## Contributing
+We welcome contributions to ThinkThatch! If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
 
-## How to run the tests
 
-(about test description)
-
-1. Test results
-    1. unit test - component
-    2. unit test - function
-    3. integration test
-    4. e2e test (FE: Cypress)
-
-## Reference
-
-- URL
