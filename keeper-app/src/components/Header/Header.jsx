@@ -4,7 +4,7 @@ import './Header.css';
 function Header() {
   return (
     <header>
-      <h1>Keeper</h1>
+      <h1>ThinkThatch</h1>
     </header>
   );
 }
