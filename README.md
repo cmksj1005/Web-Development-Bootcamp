@@ -16,9 +16,9 @@ This app is crafted using HTML, CSS, and React to offer a streamlined note-takin
    npm install
    ```
 2. Run npm
-
+   ```
    npm start
-
+   ```
 3. Navigate to “http://localhost:3000/”
 
 ## Contributing
