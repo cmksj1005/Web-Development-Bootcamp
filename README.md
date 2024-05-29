@@ -20,7 +20,3 @@ This app is crafted using HTML, CSS, and React to offer a streamlined note-takin
    npm start
    ```
 3. Navigate to “http://localhost:3000/”
-
-## Contributing
-
-We welcome contributions to ThinkThatch! If you'd like to contribute, please fork the repository and use a feature branch. Pull requests are warmly welcome.
